@@ -1,0 +1,147 @@
+.add-form {
+    border-radius: 5px;
+    
+    background: #ffffc1;
+    box-shadow:  20px 20px 60px #d9d9a4, -20px -20px 60px #ffffde;
+    margin: 6px 12px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 60vh;
+}
+
+.form-item {
+    margin: 12px 0px;
+    width: 70%;
+    padding: 4px;
+    border-radius: 6px;
+    background-color: white;
+}
+
+.form-item label {
+    background-color: lightblue;
+    padding: 2px 12px;
+    border-radius: 0px 4px 4px 0px;
+    
+    
+}
+.form-item input {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    width: 70%;
+}
+
+.category-container-parent {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    flex: 1;
+}
+.category {
+    position: relative;
+    width: 40%;
+}
+
+.category-dropdown {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    align-items: center;
+    margin: 12px 0px;
+    padding: 4px;
+}
+.category-dropdown i {
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.category-item {
+    display: flex;
+    justify-content: space-between;
+    
+    padding: 8px 0px;
+}
+
+.category-item i {
+    padding: 8px;
+    
+
+}
+.category-item label {
+    padding: 8px;
+}
+
+.category-container {
+    display: flex;
+    position: absolute;
+    width: 18%;
+    flex-direction: column;
+    background-color: white;
+    cursor: pointer;
+}
+.category-container :hover {
+    background-color: lightgreen;
+}
+
+.form-add-button {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.form-add-button div {
+    display: flex;
+    border:  1px solid black;
+    padding: 5px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+
+}
+
+.form-add-button :hover {
+    background-color: lightgreen;
+}
+
+@media only screen and (max-width:1024px){
+
+    .form-item{
+        width: 100%;
+    }
+    .form-item input {
+        width: 70%;
+    }
+    .amount-input {
+        width: 50% !important;
+    }
+    .category {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width:512px){
+    .add-form {
+        width: 98%;
+    }
+    .form-item{
+        width: 100%;
+    }
+    .form-item input {
+        width: 100%;
+    }
+    .amount-input {
+        width: 50% !important;
+    }
+    .category {
+        width: 100%;
+    }
+    .category-container-parent{
+        width: 100%;
+    }
+    .category-container{
+        width: 50%;
+    }
+    
+}
+

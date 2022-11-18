@@ -1,0 +1,28 @@
+
+
+.modal-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.success-icon {
+    margin-top: 1rem;
+    font-size: 1.8rem;}
+
+.take-home-button {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+@media only screen and (max-width:512px){
+    .modal-contaainer{
+        width: 100%;
+    }
+    
+}
+
+
