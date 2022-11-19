@@ -1,34 +1,24 @@
-import React from 'react'
-import { useSelector } from 'react-redux';
+import React from "react";
+import { useSelector } from "react-redux";
 
-import Card from './Card';
-import "./expense-list.css"
+import Card from "./Card";
+import "./expense-list.css";
 
 const ExpenseList = () => {
-    const listEx = useSelector((state)=> state.expenses);
-    console.log(listEx[0])
-    
-    
+  const list = useSelector((state) => state.expenses.expenseList);
+  console.log(list);
+
   return (
-    <div className='expence-list'>
+    <div className="expence-list">
+      {/* {list.map((item) => (
+        <h2 key={item.id}>{item.title} : {item.amount}</h2>
         
-    {listEx.length? listEx.map(items => (<Card items={items} />)):
-        
-        
-        <div>hello</div>
-    
-    }
-        
-        
-        
-        
+      ))} */}
 
-
-      
+      {list.length? list.map((item) => <Card item={item}/>):
+      <h2>empty</h2>}
     </div>
-  )
- 
-  
-}
+  );
+};
 
-export default ExpenseList
+export default ExpenseList;

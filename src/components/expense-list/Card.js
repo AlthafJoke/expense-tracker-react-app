@@ -1,10 +1,29 @@
-import React from 'react'
+import React from 'react';
+import './card.css';
+import moment from 'moment'
 
-const Card = ({items}) => {
+
+const Card = ({item}) => {
+  const time = moment(item.createdAt).fromNow();
+  
+  // console.log(item.categroy.title)
   return (
-    <div className='card'>
+    <div className='card' style={{borderRight: `6px solid ${item.category.color}`}}>
       <div className='card-image-container'>
-        <span>{items.categroy.icon}</span>
+        <span>{item.category.icon}</span>
+        
+      </div>
+      <div className='card-info'>
+        <label className='card-title'>{item.title}</label>
+        <label className='card-time'>{time}</label>
+      </div>
+      <div className='card-right'>
+        <div >
+          <label className='card-amount'>₹ {item.amount}</label>
+        </div>
+        <div className='delete-icon'>
+          <i class="fa-solid fa-trash"></i>
+        </div>
         
       </div>
 

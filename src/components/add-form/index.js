@@ -45,7 +45,7 @@ const AddForm = () => {
     }
     const data = {
       title: title,
-      amout: amount,
+      amount: amount,
       category: category,
       createdAT: new Date(),
     };

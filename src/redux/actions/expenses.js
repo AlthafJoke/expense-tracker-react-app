@@ -4,7 +4,7 @@ export const addExpence = (data) => {
     console.log(data)
     return {
         type: ADD_EXPENSE,
-        data:data
+        data,
 
     };
 };
@@ -12,6 +12,6 @@ export const addExpence = (data) => {
 export const deleteExpense = (data) => {
     return {
         type: DELETE_EXPENSE,
-        data:data
+        data,
     }
 }
