@@ -6,12 +6,12 @@ const Header = () => {
     <div className='header-container'>
         <div className='header'>
             <div>
-                Expensor <i class="devicon-redux-original colored redux-logo"></i>
+                Expensor <i className="devicon-redux-original colored redux-logo"></i>
             </div>
             <div className='header-logo'>
-                <a href="https://github.com/althafav/" target="_blank" rel="noopener noreferer">
+                <a href="https://github.com/althafav/" target="_blank" rel="noopener noreferrer">
                     
-                    <i class="devicon-github-original colored"></i>
+                    <i className="devicon-github-original colored"></i>
                     
           
                 </a>

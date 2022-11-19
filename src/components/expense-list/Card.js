@@ -1,16 +1,28 @@
 import React from 'react';
 import './card.css';
 import moment from 'moment'
+import { useDispatch } from 'react-redux';
+import { deleteExpense } from '../../redux/actions/expenses';
 
 
-const Card = ({item}) => {
+const Card = ({item, notifySuccess}) => {
   const time = moment(item.createdAt).fromNow();
+  const dispatch = useDispatch();
+  
+
+  const handleDelete = (id) => {
+    console.log(id)
+    dispatch(deleteExpense(id))
+    notifySuccess();
+  }
   
   // console.log(item.categroy.title)
   return (
+
     <div className='card' style={{borderRight: `6px solid ${item.category.color}`}}>
+      
       <div className='card-image-container'>
-        <span>{item.category.icon}</span>
+        
         
       </div>
       <div className='card-info'>
@@ -21,8 +33,8 @@ const Card = ({item}) => {
         <div >
           <label className='card-amount'>₹ {item.amount}</label>
         </div>
-        <div className='delete-icon'>
-          <i class="fa-solid fa-trash"></i>
+        <div className='delete-icon'  onClick={()=>handleDelete(item.createdAt)}>
+          <i className="fa-solid fa-trash" ></i>
         </div>
         
       </div>

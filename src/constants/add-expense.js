@@ -1,8 +1,8 @@
 const graduationIcon = <i className="fa-solid fa-graduation-cap"></i>
 const medicalIcon = <i className="fa-solid fa-house-medical"></i>
-const foodIcon = <i class="fa-solid fa-utensils"></i>
-const travelIcon = <i class="fa-solid fa-plane"></i>
-const partyIcon = <i class="fa-solid fa-film"></i>
+const foodIcon = <i className="fa-solid fa-utensils"></i>
+const travelIcon = <i className="fa-solid fa-plane"></i>
+const partyIcon = <i className="fa-solid fa-film"></i>
 
 export const categories = [
     {

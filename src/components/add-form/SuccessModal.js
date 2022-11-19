@@ -20,7 +20,7 @@ const SuccessModal = (props) => {
         <Modal  isOpen={props.modalOpen} style={customStyles}>
             <div className='modal-inner'>
                 <label>Expence added successfully</label>
-                <i class="fa-solid fa-circle-check success-icon" ></i>
+                <i className="fa-solid fa-circle-check success-icon" ></i>
                 <Link to="/">
                 <div className='take-home-button'><i class="fa-sharp fa-solid fa-house"></i>Home</div>
                 {/* <img src={require('../assets/images/checked.png').default } alt="Expence added" className='added-image'/> */}

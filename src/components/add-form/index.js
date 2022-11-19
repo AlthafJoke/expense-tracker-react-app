@@ -6,15 +6,20 @@ import { addExpence } from "../../redux/actions/expenses";
 import {toast, ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import SuccessModal from "./SuccessModal";
+// import { v4 as uuid } from 'uuid';
 
 const AddForm = () => {
   const cat = categories;
   const [categoryOpen, setCategoryOpen] = useState(false);
+  // const unique_id = uuid();
+  // const small_id = unique_id.slice(0,8)
+  // const testid = Math.floor(Math.random() * 10);
 
   const [title, setTitle] = useState("");
   const [amount, setAmount] = useState(0);
   const [category, setCategory] = useState(null);
   const [modalOpen, setModalOpen] = useState(false)
+
 
   const dispatch = useDispatch();
 
@@ -47,7 +52,7 @@ const AddForm = () => {
       title: title,
       amount: amount,
       category: category,
-      createdAT: new Date(),
+      createdAt: new Date().toISOString(),
     };
     dispatch(addExpence(data));
     setModalOpen(true)
@@ -113,7 +118,7 @@ const AddForm = () => {
       <div className="form-add-button">
         <div onClick={handleSubmit}>
           <label>Add</label>
-          <i class="fa-solid fa-paper-plane"></i>
+          <i className="fa-solid fa-paper-plane"></i>
         </div>
       </div>
     </div>

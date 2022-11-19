@@ -1,15 +1,20 @@
 import React, { useState } from 'react'
+import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
+import { searchExpense } from '../../redux/actions/expenses'
 import './topfold.css'
 
 const TopFold = () => {
   const [query , setQuery] = useState("")
 
-  const handleQuery = (e) => {
-    // console.log(e.target.value)
-    setQuery(e.target.value)
+  const dispatch = useDispatch();
 
+  const handleQuery = (e) => {
+    setQuery(e.target.value);
+    dispatch(searchExpense(e.target.value))
   }
+
+  
 
   return (
 
@@ -32,7 +37,7 @@ const TopFold = () => {
       <div className='add-topfold'>
         <Link to='/'>
         <div className='add-topfold-button'>
-        <i class="fa-solid fa-angle-left"></i>
+        <i className="fa-solid fa-angle-left"></i>
         <label>Back</label>
         </div>
         </Link>
